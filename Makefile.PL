@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME                => 'TAIR::Blast',
-    AUTHOR              => q{Haktan Suren <hsuren@vt.edu>},
+    AUTHOR              => q{Haktan Suren <hsuren@cpan.org>},
     VERSION_FROM        => 'lib/TAIR/Blast.pm',
     ABSTRACT_FROM       => 'lib/TAIR/Blast.pm',
     ($ExtUtils::MakeMaker::VERSION >= 6.3002
@@ -13,6 +13,8 @@ WriteMakefile(
     PL_FILES            => {},
     PREREQ_PM => {
         'Test::More' => 0,
+        'LWP::UserAgent' => 0,
+        'HTTP::Request::Common' => 0,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'TAIR-Blast-*' },
